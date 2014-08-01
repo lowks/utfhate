@@ -1,6 +1,6 @@
 import lib
 
-def htmlstring(chars, lazy=False):
+def htmlstring(chars, lazy=False, literal=False):
     if not hasattr(chars, '__next__'):
         chars = iter(chars)
         pass
@@ -15,7 +15,7 @@ def htmlstring(chars, lazy=False):
                 entity, char = lib.multipart(char, chars)
                 yield entity
                 continue
-            elif decimal in [60, 62]:
+            elif literal and decimal in [60, 62]:
                 yield lib.utfentity(decimal)
             else:
                 yield char
