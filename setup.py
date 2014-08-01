@@ -5,4 +5,4 @@ setup(name='utfhate',
       author='Mikael Kohlmyr',
       author_email='mikael@kohlmyr.com',
       license='LICENSE',
-      packages='utfhate')
+      packages=['utfhate'])
