@@ -1,6 +1,6 @@
 utfhate
 =======
-Doing Bad Things<sup>TM</sup> to UTF-8 byte strings.
+Doing BAD THINGS<sup>TM</sup> to UTF-8 byte strings and unicode strings.
 
 e.g.
 ```
