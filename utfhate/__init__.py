@@ -1,7 +1,7 @@
 import six
 import lib
 
-def htmlstring(chars, lazy=False, literal=False):
+def htmlstring(chars, lazy=False, literal=False,):
     if not hasattr(chars, '__next__'):
         chars = iter(chars)
         pass
@@ -28,7 +28,7 @@ def htmlstring(chars, lazy=False, literal=False):
                     pass
                 pass
             else:
-                yield char
+                yield lib.ascii(char)
                 pass
             char = None
             pass

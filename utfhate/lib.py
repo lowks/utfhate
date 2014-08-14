@@ -1,3 +1,5 @@
+import six
+
 def continuation(decimal):
     return byteliteral(decimal)[-6:]
 
@@ -29,6 +31,9 @@ def byteliteral(decimal):
 
 def utfentity(*args):
     return htmlentity(decimalcp(*binarycp(*args)))
+
+def ascii(string):
+    return six.text_type(string.encode('ascii'))
 
 def multipart(char, iterable):
     bytes = [ord(char)]

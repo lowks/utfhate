@@ -8,6 +8,10 @@ $ python
 >>> import utfhate
 >>> utfhate
 <module 'utfhate' from 'utfhate/__init__.py'>
->>> utfhate.htmlstring('\xc2\xa3\xc2\xa5\xc2\xbf\xef\xbb\xbf\xc5\xbb')
-'&#163;&#165;&#191;&#65279;&#379;'
+
+>>> utfhate.htmlstring('asd \xc2\xa3 \xe2\x98\xaf \xc2\xbf \xe0\xa6\x8b')
+'asd &#163; &#9775; &#191; &#2443;'
+
+>>> utfhate.htmlstring(u'asd \xa3 \u262f \xbf \u098b')
+'asd &#163; &#9775; &#191; &#2443;'
 ```
