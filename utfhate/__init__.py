@@ -1,6 +1,7 @@
 import six
 import lib
 
+
 def htmlstring(chars, lazy=False, literal=False,):
     if not hasattr(chars, '__next__'):
         chars = iter(chars)
@@ -34,4 +35,3 @@ def htmlstring(chars, lazy=False, literal=False,):
             pass
         pass
     return generator() if lazy else ''.join(list(generator()))
-

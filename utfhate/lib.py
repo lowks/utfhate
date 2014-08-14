@@ -1,7 +1,9 @@
 import six
 
+
 def continuation(decimal):
     return byteliteral(decimal)[-6:]
+
 
 def binarycp(*args):
     if not len(args):
@@ -17,23 +19,30 @@ def binarycp(*args):
         pass
     return
 
+
 def decimalcp(*args):
     return int(''.join(args), 2)
+
 
 def htmlentity(decimal):
     return '&#%d;' % decimal
 
+
 def hexliteral(decimal):
     return hex(decimal)[2:]
+
 
 def byteliteral(decimal):
     return bin(decimal)[2:].zfill(8)
 
+
 def utfentity(*args):
     return htmlentity(decimalcp(*binarycp(*args)))
 
+
 def ascii(string):
     return six.text_type(string.encode('ascii'))
+
 
 def multipart(char, iterable):
     bytes = [ord(char)]
